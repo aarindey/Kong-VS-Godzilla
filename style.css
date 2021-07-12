@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+}
+header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.gameContainer{
+background: url(bg.jpg) no-repeat;
+background-size: cover;
+
+width: 100%;
+height: 100vh;
+}
+.gameOver{
+    position: relative;
+    height: 89vh;
+    font-size: 53px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Ubuntu', sans-serif;
+    visibility: hidden;
+    font-weight: bolder;
+    background-color: rgba(50, 240, 215, 0.555);
+    color: rgb(2, 0, 105);
+}
+#scoreCont{
+    font-size: 25px;
+    color: #dddddd;
+    font-weight: bold;
+    position: absolute;
+   
+    border: 2px solid rgb(219, 251, 255);
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+.godzilla{
+    background: url(godzilla.png);
+    height: 365px;
+    width: 337px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    bottom:-40px;
+}
+.kong{
+    background: url(kong.png);
+    height: 350px;
+    width: 236px;
+    background-size: cover;
+    position: absolute;
+    bottom: 10px;
+    left: 50vw;
+}
+.animateKong{
+    animation: kong 0.5s linear;
+}
+@keyframes kong{
+    0%{
+bottom:0;
+    }
+    50%{
+bottom:620px;
+    }
+    100%{
+bottom:0;
+    }
+}
+.animateGodzilla{
+    animation: godzilla 3.5s linear infinite;
+}
+@keyframes godzilla{
+    0%{
+        left:-10vw;
+            }
+            100%{
+        left:100vw;
+            }   
+}
